@@ -5,12 +5,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, 'server/public'), // 🚀 Output directly to server
+    outDir: path.resolve(__dirname, '../server/public'), // ✅ Direct to backend
     emptyOutDir: true
-  },
-  server: {
-    proxy: {
-      '/api': 'http://localhost:3001'
-    }
   }
 });
