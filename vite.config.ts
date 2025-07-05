@@ -5,12 +5,12 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, 'server/public'), // ✅ This works from root
+    outDir: path.resolve(__dirname, 'server/public'), // ✅ outputs here
     emptyOutDir: true
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:3001' // ✅ Local proxy to Express backend
+      '/api': 'http://localhost:3001' // ✅ Proxy to Express backend
     }
   }
 });
